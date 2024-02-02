@@ -20,6 +20,7 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, "Welcome");
+  return;
 });
 
 bot.on("message", async (msg) => {
