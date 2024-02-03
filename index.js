@@ -18,11 +18,6 @@ const token = process.env.TELEGRAM_BOT_TOKEN;
 
 const bot = new TelegramBot(token, { polling: true });
 
-bot.onText(/\/start/, (msg) => {
-  bot.sendMessage(msg.chat.id, "Welcome");
-  return;
-});
-
 bot.on("message", async (msg) => {
   const chatid = msg.chat.id;
   const userInput = msg.text;
